@@ -6,9 +6,8 @@ const tabs = [
   'Sandal', 'Shirt', 'Sneaker', 'Trouser', 'Tshirt',
 ];
 
-export default function ImageGrid( { setPathImage }) {
+export default function ImageGrid( { setPathImage, pathImage }) {
   const [activeTab, setActiveTab] = useState(tabs[0]);
-  const [selectedImagePath, setSelectedImagePath] = useState(null);
 
   const size = 150;
   const columns = 4;
@@ -64,7 +63,7 @@ export default function ImageGrid( { setPathImage }) {
             {({ rowIndex, columnIndex, style }) => {
               const index = rowIndex * columns + columnIndex;
               const src = images[index];
-              const isSelected = selectedImagePath === src;
+              const isSelected = pathImage === src;
               if (!src) return null;
 
               return (
@@ -83,9 +82,7 @@ export default function ImageGrid( { setPathImage }) {
                     style={{
                       width: '100%',
                       height: '100%',
-                      objectFit: 'cover',
-                      borderRadius: '8px',
-                      boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                      borderRadius: '10px',
                     }}
                   />
                 </div>

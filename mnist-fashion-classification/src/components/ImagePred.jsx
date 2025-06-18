@@ -1,13 +1,14 @@
 import * as tf from '@tensorflow/tfjs';
 import { BarChart } from '@mui/x-charts/BarChart';
 import { useState } from 'react';
+import { FaImage } from "react-icons/fa6";
 
 export default function ImagePred( { pathImage } ) {
     const [model, setModel] = useState(null);
     const [prediction, setPrediction] = useState(null);
     const displayBoxStyle = {
         width: '50%',
-        backgroundColor: '#f0f0f0',
+        backgroundColor: 'grey',
         margin: '10px',
         borderRadius: 10,
         height: 300,
@@ -71,7 +72,10 @@ export default function ImagePred( { pathImage } ) {
                       style={{ height: '80%', borderRadius: 20 }}
                     />
                   ) : (
-                    <p>Select an image</p>
+                    <div>
+                        <FaImage style={{ fontSize: '48px', color: '#ccc' }}  />
+                        <p>Select Image</p>
+                    </div>
                   )}
                 </div>
         

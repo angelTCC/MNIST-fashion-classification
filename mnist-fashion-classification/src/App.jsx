@@ -10,7 +10,7 @@ function App() {
     <>
       <h2>MNIST fashion classification</h2>
       <ImagePred pathImage = { pathImage } />
-      <ImageGrid setPathImage = { setPathImage }/>
+      <ImageGrid setPathImage = { setPathImage } pathImage= { pathImage } />
     </>
   )
 }
