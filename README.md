@@ -15,6 +15,8 @@ This project explores and compares different deep learning architectures for cla
 
 Evaluate how different techniques — like **Batch Normalization**, **Dropout**, and **Learning Rate Scheduling** — affect training and performance.
 
+![image](mnist.png)
+
 ## 📊 Model Comparison Table
 
 | Model                        | Train Loss | Train Accuracy | Val Loss | Val Accuracy |
